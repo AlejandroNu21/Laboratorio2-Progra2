@@ -1,8 +1,23 @@
-﻿<table id="ListaPersona" class="table table-danger table-striped animate_animated animate_fadeInDown">
+﻿<div class="text-center">
+    <h1 style="color: cornflowerblue" class=" animate__animated animate__jello">LISTADO DE INFORMACION</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <style>
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 35px;
+            color: firebrick
+        }
+    </style>
+</div>
+
+
+<table id="ListaPersona" class="table table-warning table-striped animate_animated animate_fadeInDown">
     <thead>
         <tr>
             <th>
-                Id persona
+                Id personas
             </th>
             <th>
                 Nombre Persona
@@ -23,7 +38,8 @@
 @section scripts{
 
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script>$(document).ready(function () {
+    <script>
+    $(document).ready(function () {
 
             var tabla = $('#ListaPersona').DataTable({
                 "ajax": {

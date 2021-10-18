@@ -15,19 +15,18 @@ namespace Laboratorio2Progra.Dominio
 
 
         [Display(Name = "Nombre")]
-        [Required(ErrorMessage = "C")]
+        [Required(ErrorMessage = "Campo requerido")]
         public string NombrePersona { get; set; }
 
 
 
         [Display(Name = "Edad")]
-        [Required(ErrorMessage = "C")]
-        [Range(18, int.MaxValue, ErrorMessage = "Es")]
+        [Range(18, int.MaxValue, ErrorMessage = "Debe ser mayor de edad")]
         public int EdadPersona { get; set; }
 
 
         [Display(Name = "Descripcion")]
-        [Required(ErrorMessage = "Ca")]
+        [Required(ErrorMessage = "Campo requerido")]
         public string DescripcionPersona { get; set; }
     }
 }
