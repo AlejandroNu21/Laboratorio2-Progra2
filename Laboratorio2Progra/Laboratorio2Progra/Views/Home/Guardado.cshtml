@@ -22,34 +22,37 @@
         <br />
 
 
-            <div class="form-group col-md-8">
-                <label style="color: cornflowerblue" class="animate__animated animate__backInDown">Nombre</label>
-                <br />
-                <i class="fas fa-user-circle"></i>
-                @Html.TextBoxFor(m => m.NombrePersona)
-                @Html.ValidationMessageFor(m => m.NombrePersona)
-                <br />
+        <div class="form-group col-md-8">
+            <label style="color: cornflowerblue" class="animate__animated animate__backInDown">Nombre</label>
+            <br />
+            <i class="fas fa-user-circle"></i>
+            @Html.TextBoxFor(m => m.NombrePersona)
+            @Html.ValidationMessageFor(m => m.NombrePersona)
+            <br />
 
-                <label style="color: cornflowerblue" class="animate__animated animate__backInDown">Edad</label>
-                <br />
-                <i class="fas fa-user-plus"></i>
-                @Html.TextBoxFor(m => m.EdadPersona)
-                @Html.ValidationMessageFor(m => m.EdadPersona)
-                <br />
+            <label style="color: cornflowerblue" class="animate__animated animate__backInDown">Edad</label>
+            <br />
+            <i class="fas fa-user-plus"></i>
+            @Html.TextBoxFor(m => m.EdadPersona)
+            @Html.ValidationMessageFor(m => m.EdadPersona)
+            <br />
 
-                <label style="color: cornflowerblue" class="animate__animated animate__backInDown">Descripcion Persona</label>
-                <br />
-                <i class="fas fa-id-card"></i>
-                @Html.TextBoxFor(m => m.DescripcionPersona)
-                @Html.ValidationMessageFor(m => m.DescripcionPersona)
-                <br />
+            <label style="color: cornflowerblue" class="animate__animated animate__backInDown">Descripcion Persona</label>
+            <br />
+            <i class="fas fa-id-card"></i>
+            @Html.TextBoxFor(m => m.DescripcionPersona)
+            @Html.ValidationMessageFor(m => m.DescripcionPersona)
+            <br />
 
-                <br />
-                <i class="fas fa-check-circle fa-2x"></i>
-                <input type="submit" class="btn btn-outline-success animate__animated animate__backInDown" value="GUARDAR" />
-                <button type="submit"  class="btn btn-outline-success animate_animated animate_backInDown"> @Html.ActionLink("Lista Datos", "ListaDatos")</button>
-            </div>
-
+            <br />
+            <i class="far fa-save fa-2x"></i>
+            <input type="submit" class="btn btn-outline-success animate__animated animate__backInDown" value="GUARDAR" />
+            <br />
+            <br />
+            <i class="fas fa-list-ul fa-2x"></i>
+            <button type="submit" class="btn btn-outline-success animate_animated animate_backInDown"> @Html.ActionLink("Lista Datos", "ListaDatos")</button>
+            <br />
+        </div>
 
 
 
