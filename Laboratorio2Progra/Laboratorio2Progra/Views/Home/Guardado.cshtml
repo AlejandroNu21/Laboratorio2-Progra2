@@ -1,0 +1,57 @@
+﻿@model Laboratorio2Progra.Dominio.Entidad
+
+
+
+<link rel="stylesheet"
+      href="https://kit.fontawesome.com/ffd11ebe0f.js" crossorigin="anonymous" />
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js>" />
+
+<script src="https://kit.fontawesome.com/ffd11ebe0f.js" crossorigin="anonymous"></script>
+
+
+<div class="container-fluid formulario" style="max-width:inherit;">
+    @using (Html.BeginForm("Guardado", "Home", FormMethod.Post))
+    {
+
+
+       <h1  class="animate__animated animate__backInDown text-center " > Datos</h1>
+        <br />
+
+        <div class="form-group col-md-8">
+            <label class="animate__animated animate__backInDown">Nombre</label>
+            <br />
+            <i class="far fa-user"></i>
+            @Html.TextBoxFor(m => m.NombrePersona)
+            @Html.ValidationMessageFor(m => m.NombrePersona)
+            <br />
+
+            <label class="animate__animated animate__backInDown">Edad</label>
+            <br />
+            <i class="fas fa-list-ol"></i>
+            @Html.TextBoxFor(m => m.EdadPersona)
+            @Html.ValidationMessageFor(m => m.EdadPersona)
+            <br />
+
+            <label class="animate__animated animate__backInDown">Descripcion Persona</label>
+            <br />
+            <i class="far fa-address-card"></i>
+            @Html.TextBoxFor(m => m.DescripcionPersona)
+            @Html.ValidationMessageFor(m => m.DescripcionPersona)
+            <br />
+
+            <br />
+            <i class="fas fa-save fa-2x"></i>
+            <input type="submit" class="btn btn-active animate__animated animate__backInDown" value="GUARDAR" />
+            <button type="submit" class="btn btn-danger animate_animated animate_backInDown"> @Html.ActionLink("Lista Datos", "ListaDatos")</button>
+        </div>
+
+
+
+        
+    }
+</div>

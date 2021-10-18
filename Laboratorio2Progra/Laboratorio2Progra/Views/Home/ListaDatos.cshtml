@@ -1,0 +1,46 @@
+﻿<table id="ListaPersona" class="table table-danger table-striped animate_animated animate_fadeInDown">
+    <thead>
+        <tr>
+            <th>
+                Id persona
+            </th>
+            <th>
+                Nombre Persona
+            </th>
+            <th>
+                Edad Persona
+            </th>
+            <th>
+                Descripcion Persona
+            </th>
+        </tr>
+    </thead>
+
+</table>
+
+
+
+@section scripts{
+
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script>$(document).ready(function () {
+
+            var tabla = $('#ListaPersona').DataTable({
+                "ajax": {
+                    "url": '/Home/GetAll',
+                    "type": "get",
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": "idPersona", "name": "idPersona", "autoWidth": true },
+                    { "data": "nombrePersona", "name": "nombrePersona", "autoWidth": true },
+                    { "data": "edadPersona", "name": "edadPersona", "autoWidth": true },
+                    { "data": "descripcionPersona", "name": "descripcionPersona", "autoWidth": true }
+
+                ]
+
+
+            })
+        })</script>
+
+}
